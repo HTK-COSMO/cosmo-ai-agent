@@ -1,6 +1,6 @@
 
 from langchain.agents import initialize_agent, Tool
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from tools.excel_tools import handle_excel
 
