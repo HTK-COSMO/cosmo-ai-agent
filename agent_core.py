@@ -3,6 +3,10 @@ from langchain.agents import initialize_agent, Tool
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from tools.excel_tools import handle_excel
+import streamlit as st
+import os
+
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 llm = ChatOpenAI(temperature=0)
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
